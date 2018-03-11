@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src='C:\img\jikexueyuan jquery pubuliu\main3.js'></script>
+<link rel="stylesheet" type="text/css" href="C:\img\jikexueyuan jquery pubuliu\style1.css">
+</head>
+<script type="text/javascript">
+	var jWindow=$(window);
+	jWindow.scroll(function(){
+		var scrollHeight=jWindow.scrollTop();
+		var contentHeight=$("#chageid").height()-$('.lesson-nav').height();
+		if(scrollHeight>253&&scrollHeight<contentHeight+253){
+			$('.lesson-nav').css({
+				position:'absolute',
+				left:'0px',
+				top:scrollHeight-253+'px'
+			});
+		}else if(scrollHeight<=253){
+			$('.lesson-nav').css({
+				position:'absolute',
+				left:'0px';
+				top:'0px';
+			});
+		}
+	});
+</script>
+<body>
+
+</body>
+
+</html>
